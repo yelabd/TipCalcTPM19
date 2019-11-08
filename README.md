@@ -19,6 +19,8 @@ The following **optional** features are implemented:
 * [ ] Using locale-specific currency and currency thousands separators.
 * [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
+* [X] Added dark mode support.
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
@@ -29,7 +31,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
-    Copyright [2018] [Youssef Elabd]
+    Copyright [2019] [Youssef Elabd]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
