@@ -50,8 +50,8 @@ class ViewController: UIViewController {
             let tipValueIndex = self.tipValueSegmentedControl.selectedSegmentIndex
             let tip = billAmount * percentages[tipValueIndex]
             let totalAmount = billAmount + tip
-            self.tipAmountLabel.text = "Tip is $\(tip)"
-            self.totalAmountLabel.text = "$\(totalAmount)"
+            self.tipAmountLabel.text = getTipString(for: tip)
+            self.totalAmountLabel.text = getTotalString(for: totalAmount)
         } else {
             self.hasValue = false
             UIView.animate(withDuration: 0.2, animations: {
@@ -67,8 +67,8 @@ class ViewController: UIViewController {
             let tipValueIndex = self.tipValueSegmentedControl.selectedSegmentIndex
             let tip = billAmount * percentages[tipValueIndex]
             let totalAmount = billAmount + tip
-            self.tipAmountLabel.text = "Tip is $\(tip)"
-            self.totalAmountLabel.text = "$\(totalAmount)"
+            self.tipAmountLabel.text = getTipString(for: tip)
+            self.totalAmountLabel.text = getTotalString(for: totalAmount)
         }
     }
     
@@ -84,5 +84,12 @@ class ViewController: UIViewController {
         self.tipLabelView.frame.origin.y = self.view.bounds.height - self.tipLabelView.frame.height
     }
     
+    func getTipString(for tip: Double) -> String {
+        return String(format: "Tip is $%.2f", tip)
+    }
+    
+    func getTotalString(for total: Double) -> String {
+        return String(format: "$%.2f", total)
+    }
 }
 
